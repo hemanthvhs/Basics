@@ -1,0 +1,3 @@
+() says that the function does not expect any arguments, it doesn't declare any parameters. The function's .length is 0.
+
+If you use _, it explicitly states that the function will be passed one argument, but that you don't care about it. The function's .length will be 1, which might matter in some frameworks.

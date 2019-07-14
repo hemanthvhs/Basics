@@ -1,0 +1,80 @@
+To copy array into anothor array
+---------------------------------------------
+
+CASE-1   (Wrong way of copying)
+
+var arr = [1,2,3]
+var narr = arr
+
+console.log(narr)
+console.log(arr)
+
+o/p : [1,2,3]
+      [1,2,3]
+
+
+CASE-2   (Wrong way of copying)
+
+var arr = [1,2,3]
+var narr = arr
+narr.push(4)    // Pushing 4 into newly created array narr
+console.log(narr)
+console.log(arr)
+
+o/p : [1,2,3,4]
+      [1,2,3,4]
+
+Here 4 should be added to newly created array narr since we have pushed 4 into only narr array but it's added to arr array aswell.
+Reason is when you are assigning var narr = arr , you are actually setting/passing the reference of the array.
+
+Inorder to avoid we need use slice() or spread operators.
+
+
+RESOLUTION
+------------
+
+CASE - 1 (Using Spread operator [...])
+
+var arr = [1,2,3]
+var narr = [...arr]     // this will create narr as an independent array
+
+console.log(narr)
+console.log(arr)
+
+o/p : [1,2,3]
+      [1,2,3]
+
+CASE - 1.1 (Using Spread operator [...])
+
+var arr = [1,2,3]
+var narr = [...arr]     // this will create narr as an independent array
+narr.push(4)
+console.log(narr)
+console.log(arr)
+
+o/p : [1,2,3,4]
+      [1,2,3]
+
+
+CASE - 2 (Using slice() method)
+
+var arr = [1,2,3]
+var narr = arr.slice()     // this will create narr as an independent array
+narr.push(4)
+console.log(narr)
+console.log(arr)
+
+o/p : [1,2,3,4]
+      [1,2,3]
+
+
+CASE - 2.1 (Using slice() method)
+
+var arr = [1,2,3]
+var narr = arr.slice()     // this will create narr as an independent array
+narr.push(4)
+console.log(narr)
+console.log(arr)
+
+o/p : [1,2,3,4]
+      [1,2,3]

@@ -1,0 +1,5 @@
+ 
+const source = interval(1000);//emit value in sequence every 1 second
+const subscribe = source.subscribe(val => console.log(val));
+
+//output: 0,1,2,3,4,5....

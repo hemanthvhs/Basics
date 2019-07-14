@@ -1,0 +1,22 @@
+Spread Operators
+----------------------
+Mainly used for copying of arrays i.e., copying a single array values to another array
+
+CASE-1
+
+var arr = [1,2,3]
+var narr = [...arr]
+console.log(narr)
+
+o/p : [1,2,3]
+
+CASE-2
+
+var arr = [1,2,3]
+var narr = [1,[...arr]]
+console.log(narr)
+
+o/p : [1,1,2,3]
+
+Here it's used for combining second array (narr) with first array (arr)
+

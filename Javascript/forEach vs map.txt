@@ -1,0 +1,64 @@
+forEach()
+----------
+
+forEach() method doesn’t actually return anything (undefined). It simply calls a provided function on each element in your array. This callback is allowed to mutate the calling array.
+
+CASE-1
+
+var arr = [1,2,3]
+
+arr.forEach( (num,index) => {
+   arr[index] = num * 2
+})
+
+console.log(arr)
+
+o/p : [2,4,6]
+
+CASE-2
+
+var arr = [1,2,3]
+
+arr.forEach( (num,index) => {
+   return arr[index] = num * 2
+})
+
+console.log(arr)
+
+o/p : [2,4,6]
+
+Here though we haveused return statement but it is of no use.
+
+CASE-3
+
+var arr = [1,2,3]
+
+var narr = arr.forEach( (num,index) => {
+   		return arr[index] = num * 2
+		})
+
+console.log(narr)
+
+o/p : undefined
+
+For collection of returned values from function we have used narr & if you check the o/p it's undefined.
+It means that though my function is returning the values but o/p is undefined becuase forEach never return values
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+map()
+
+map() method will also call a provided function on every element in the array. The difference is that map() utilizes return values and actually returns a new Array of the same size.
+
+var arr = [1,2,3]
+
+var narr = arr.map( (num,index) => {
+   		return  num * 2
+		})
+
+console.log(narr)
+
+o/p : [2,4,6]
+
+Here map will return the value from array(arr) to the narr which forEach failed to do
